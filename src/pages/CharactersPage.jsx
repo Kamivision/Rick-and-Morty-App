@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useOutletContext } from 'react-router-dom';
 import axios from 'axios'
 import CardContainer from "../components/CardContainer";
 
 
 const CharactersPage = () => {
     const [characterList, setCharacterList] = useState([])
+    const { createFav, removeFavorite, favorites } = useOutletContext();
 
     useEffect(() => {
       console.log(characterList)  
@@ -40,8 +42,10 @@ const CharactersPage = () => {
             <h1>Characters</h1>
             <div className="columns-4 gap-2">
             <CardContainer
-            characters={characterList}
-
+              characters={characterList}
+              createFav={createFav}
+              removeFavorite={removeFavorite}
+              favorites={favorites}
             />
             </div>
         </>

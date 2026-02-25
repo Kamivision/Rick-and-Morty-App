@@ -27,9 +27,13 @@ const CharacterDetailsPage = () => {
         {
         character ?
         <div>
-          <h1>{character.name}</h1>
           <img src={character.image} />
-            <p>Status: {character.status}</p>
+          <h1>{character.name}</h1>
+          <p>Status: {character.status}</p>
+          <p>Species: {character.species}</p>
+          {/* <p>Gender: {character.gender} </p> */}
+          <p>Origin: {character.origin.name}</p>
+          {/* <p>Last Known Location: {character.location}</p> */}
         </div>
         :
         <p>Loading...</p>

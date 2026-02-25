@@ -1,20 +1,22 @@
-import CharactersPage from "../pages/CharactersPage";
 import CharacterCard from "./CharacterCard";
 
-const CardContainer = ({characters}) => {
+const CardContainer = ({characters, createFav, removeFavorite, favorites}) => {
     return(
         <>
             <div>
                 {
                  characters.map((character) => (
                     <CharacterCard
-                    key={character.id}
-                    charName={character.name}
-                    imageSrc={character.image}
-                    status={character.status}
-                    species={character.species}
-                    origin={character.origin.name}
-                    id={character.id}
+                      key={character.id}
+                      charName={character.name}
+                      imageSrc={character.image}
+                      status={character.status}
+                      species={character.species}
+                      origin={character.origin.name}
+                      id={character.id}
+                      createFav={createFav}
+                      removeFavorite={removeFavorite}
+                      favorites={favorites}
                     />
                  ))
                 }
