@@ -38,7 +38,7 @@ function App() {
     });
   };
 
-  const removeFavorite = (id) => {
+  const removeFav = (id) => {
     setFavorites(prev => prev.filter(fav => fav.id !== id));
   };
 
@@ -53,7 +53,7 @@ function App() {
         character,
         favorites,
         createFav,
-        removeFavorite
+        removeFav
       }} /> 
       {/* <Container>
         <NavBar/>

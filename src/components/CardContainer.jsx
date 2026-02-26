@@ -1,6 +1,9 @@
 import CharacterCard from "./CharacterCard";
+import { useOutletContext } from "react-router-dom";
 
-const CardContainer = ({characters, createFav, removeFavorite, favorites}) => {
+const CardContainer = ({characters}) => {
+    const { createFav, removeFav, favorites } = useOutletContext();
+
     return(
         <>
             <div>
@@ -15,7 +18,7 @@ const CardContainer = ({characters, createFav, removeFavorite, favorites}) => {
                       origin={character.origin.name}
                       id={character.id}
                       createFav={createFav}
-                      removeFavorite={removeFavorite}
+                      removeFavorite={removeFav}
                       favorites={favorites}
                     />
                  ))

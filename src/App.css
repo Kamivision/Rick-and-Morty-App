@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+#cardStyle{
+  margin-top: 2em;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

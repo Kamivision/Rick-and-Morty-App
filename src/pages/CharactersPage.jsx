@@ -40,7 +40,7 @@ const CharactersPage = () => {
         <>
             
             <h1>Characters</h1>
-            <div className="columns-4 gap-2">
+            <div className="columns-4 gap-4 mt-4">
             <CardContainer
               characters={characterList}
               createFav={createFav}
