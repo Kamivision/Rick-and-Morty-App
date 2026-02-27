@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-
+.nav-link { 
+  background-color: aqua;
+  color: rgb(0, 0, 0) !important; }
 
 
 

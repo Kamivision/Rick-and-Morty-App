@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <div id='RnMPic' >
         
-        <a href="http://127.0.0.1:5173/" target="_blank">
+        <a href="http://127.0.0.1:5173/characters" target="_blank">
           <img 
           src='./rickAndMortyPortal.png' 
           className="

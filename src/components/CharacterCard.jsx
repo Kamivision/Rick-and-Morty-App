@@ -1,15 +1,19 @@
 
 import Card from 'react-bootstrap/Card';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useOutletContext } from 'react-router-dom';
 
-const CharacterCard = ({charName, imageSrc, status, species, id, createFav, removeFavorite, favorites}) => {
+
+const CharacterCard = ({charName, imageSrc, status, species}) => {
+  const { id } = useParams();
+  const { favorites, createFav, removeFav } = useOutletContext();
 
   const navigate = useNavigate();
   const isFav = favorites && favorites.some(fav => fav.id === id);
 
   const handleFavClick = () => {
     if (isFav) {
-      removeFavorite(id);
+      removeFav(id);
     } else {
       
       createFav({ id, name: charName, image: imageSrc, status, species });

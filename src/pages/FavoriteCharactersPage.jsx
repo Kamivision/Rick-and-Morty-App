@@ -3,6 +3,7 @@ import CharacterCard from '../components/CharacterCard';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import CardContainer from '../components/CardContainer';
 
 const FavoriteCharactersPage = () => {
   const { favorites = [], removeFavorite, createFav } = useOutletContext();
@@ -18,7 +19,8 @@ const FavoriteCharactersPage = () => {
             <Row xs={1} md={2} className="g-2">
               {favorites.map(char => (
                 <Col xs='auto' md={6} key={char.id}>
-                  <CharacterCard
+              
+                  <CharacterCard 
                     charName={char.name}
                     imageSrc={char.image}
                     status={char.status}
@@ -28,6 +30,7 @@ const FavoriteCharactersPage = () => {
                     removeFavorite={removeFavorite}
                     favorites={favorites}
                   />
+                
                 </Col>
               ))}
             </Row>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <>
-            <Navbar expand="lg" className="bg-body-tertiary">
+            <Navbar expand="md" className="bg-body-tertiary">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                 <img src='/Rick_and_Morty.svg' alt="Rick and Morty Logo" width="150" />

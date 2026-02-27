@@ -6,7 +6,7 @@ const CardContainer = ({characters}) => {
 
     return(
         <>
-            <div>
+            <div className="drop-shadow-2xl">
                 {
                  characters.map((character) => (
                     <CharacterCard
